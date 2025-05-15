@@ -9,7 +9,7 @@ import NewsletterSignup from '@/components/forms/NewsletterSignup';
 import { Button } from '@/components/ui/button';
 import RecentArticles from '@/components/home/RecentArticles';
 
-export const metadata: Metadata = {
+export const metadata = {
   title: 'GrowWise Farm Journal - Sustainable Farming Practices & Agricultural Insights',
   description: 'Your trusted source for sustainable farming practices, crop management techniques, and agricultural innovations to help your farm thrive.',
   openGraph: {
