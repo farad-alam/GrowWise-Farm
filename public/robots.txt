@@ -3,4 +3,4 @@ User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://growwisefarm.com/sitemap.xml
+Sitemap: https://grow-wise-farm.netlify.app/sitemap.xml
