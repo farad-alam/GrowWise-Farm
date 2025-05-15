@@ -60,12 +60,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${inter.variable} ${merriweather.variable}`}>
+      <meta
+        name="google-site-verification"
+        content="ipo-t2tyN_EibG0hmzkGKKoSsYZlNNSVE6XliROXNKo"
+      />
       <body className="min-h-screen font-sans antialiased bg-[#FCFAF5]">
         <div className="relative flex min-h-screen flex-col">
           <Header />
-          <div className="flex-grow pt-16">
-            {children}
-          </div>
+          <div className="flex-grow pt-16">{children}</div>
           <Footer />
         </div>
       </body>
