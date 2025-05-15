@@ -22,6 +22,30 @@ export const metadata: Metadata = {
   },
 };
 
+const popularFarmingTopic = [
+  {
+    title: "Sustainable Farming",
+    slug: "sustainable-farming",
+    image: "https://images.pexels.com/photos/4498362/pexels-photo-4498362.jpeg",
+  },
+  {
+    title: "Crop Management",
+    slug: "crop-management",
+    image: "https://images.pexels.com/photos/2252584/pexels-photo-2252584.jpeg",
+  },
+  {
+    title: "Livestock Care",
+    slug: "livestock-care",
+    image:
+      "https://images.pexels.com/photos/162801/cows-dairy-cows-milk-food-162801.jpeg",
+  },
+  {
+    title: "Farm Technology",
+    slug: "farm-technology",
+    image: "https://images.pexels.com/photos/5980594/pexels-photo-5980594.jpeg",
+  },
+];
+
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
@@ -99,32 +123,7 @@ export default function Home() {
               Popular Farming Topics
             </h2>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
-              {[
-                {
-                  title: "Sustainable Farming",
-                  slug: "sustainable-farming",
-                  image:
-                    "https://images.pexels.com/photos/4498362/pexels-photo-4498362.jpeg",
-                },
-                {
-                  title: "Crop Management",
-                  slug: "crop-management",
-                  image:
-                    "https://images.pexels.com/photos/2252584/pexels-photo-2252584.jpeg",
-                },
-                {
-                  title: "Livestock Care",
-                  slug: "livestock-care",
-                  image:
-                    "https://images.pexels.com/photos/162801/cows-dairy-cows-milk-food-162801.jpeg",
-                },
-                {
-                  title: "Farm Technology",
-                  slug: "farm-technology",
-                  image:
-                    "https://images.pexels.com/photos/5980594/pexels-photo-5980594.jpeg",
-                },
-              ].map((topic) => (
+              {popularFarmingTopic.map((topic) => (
                 // <Link
                 //   key={topic.slug}
                 //   href={`/category/${topic.slug}`}
