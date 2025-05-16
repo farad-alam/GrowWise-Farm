@@ -19,7 +19,7 @@ const merriweather = Merriweather({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://growwisefarm.com'),
+  metadataBase: new URL('https://grow-wise-farm.netlify.app'),
   title: {
     default: 'GrowWise Farm Journal - Sustainable Farming Practices & Agricultural Insights',
     template: '%s | GrowWise Farm Journal',
@@ -29,14 +29,14 @@ export const metadata: Metadata = {
   authors: [
     {
       name: 'GrowWise Farm Journal',
-      url: 'https://growwisefarm.com',
+      url: 'https://grow-wise-farm.netlify.app',
     },
   ],
   creator: 'GrowWise Farm Journal',
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://growwisefarm.com',
+    url: 'https://grow-wise-farm.netlify.app',
     title: 'GrowWise Farm Journal - Sustainable Farming Practices & Agricultural Insights',
     description: 'Your trusted source for sustainable farming practices, crop management techniques, and agricultural innovations to help your farm thrive.',
     siteName: 'GrowWise Farm Journal',
