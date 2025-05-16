@@ -160,13 +160,15 @@ const articles = [
 ];
 
 export const metadata: Metadata = {
-  title: 'Blog | GrowWise Farm Journal',
-  description: 'Explore articles on sustainable farming, crop management, livestock care, and agricultural innovations.',
+  title: "Blog | GrowWise Farm Journal",
+  description:
+    "Explore articles on sustainable farming, crop management, livestock care, and agricultural innovations.",
   openGraph: {
-    title: 'Blog | GrowWise Farm Journal',
-    description: 'Explore articles on sustainable farming, crop management, livestock care, and agricultural innovations.',
-    url: 'https://growwisefarm.com/blog',
-    type: 'website',
+    title: "Blog | GrowWise Farm Journal",
+    description:
+      "Explore articles on sustainable farming, crop management, livestock care, and agricultural innovations.",
+    url: "https://grow-wise-farm.netlify.app/blog",
+    type: "website",
   },
 };
 
