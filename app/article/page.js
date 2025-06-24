@@ -3,11 +3,13 @@ import {fetchPostPreviews} from "../../lib/contentful/fetchPostPreviews";
 import { documentToPlainTextString } from "@contentful/rich-text-plain-text-renderer";
 import Link from "next/link";
 
-const articlePage = async () => {
 
-  const posts = await fetchPostPreviews()
+
+const articlePage = async () => {
+  const posts = await fetchPostPreviews();
   // console.log(posts);
 
+  
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       <h1 className="text-3xl font-bold text-green-800 mb-8 text-center">
@@ -53,7 +55,6 @@ const articlePage = async () => {
                 >
                   Read more →
                 </Link>
-                
               </div>
             </div>
           );

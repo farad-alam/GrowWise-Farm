@@ -2,12 +2,43 @@ import React from "react";
 // import fetchPostBySlug from "../../../lib/contentful/fetchPostBySlug";
 import { fetchPostBySlug } from "@/lib/contentful/fetchPostBySlug";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+import { BLOCKS } from "@contentful/rich-text-types";
+import Image from "next/image";
 
 async function postDetailsPage({ params }) {
-  const { slug } = params
-  const post = await fetchPostBySlug(slug)
-//   console.log(postDetais);
+  const { slug } = params;
+  const post = await fetchPostBySlug(slug);
+  //   console.log(postDetais);
+  // Define custom render options
+  const richTextJson = post.postDescription?.json;
+  const assetLinks = post.postDescription?.links?.assets?.block || [];
 
+  // Map sys.id → asset data
+  const assetMap = new Map();
+  assetLinks.forEach((asset) => {
+    assetMap.set(asset.sys.id, asset);
+  });
+
+  const renderOptions = {
+    renderNode: {
+      [BLOCKS.EMBEDDED_ASSET]: (node) => {
+        const asset = assetMap.get(node.data.target.sys.id);
+        if (!asset) return null;
+
+        return (
+          <Image
+            src={
+              asset.url.startsWith("http") ? asset.url : `https:${asset.url}`
+            }
+            alt={asset.title || "Embedded Image"}
+            className="my-4 rounded-lg shadow"
+            width={520}
+            height={420}
+          />
+        );
+      },
+    },
+  };
   return (
     <article className="max-w-4xl mx-auto px-4 py-10">
       {/* Thumbnail */}
@@ -38,7 +69,7 @@ async function postDetailsPage({ params }) {
 
       {/* Content */}
       <div className="prose prose-green max-w-none text-gray-800">
-        {documentToReactComponents(post.postDescription?.json)}
+        {documentToReactComponents(richTextJson, renderOptions)}
       </div>
     </article>
   );
